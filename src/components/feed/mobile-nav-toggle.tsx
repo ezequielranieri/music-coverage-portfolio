@@ -36,12 +36,10 @@ export function MobileNavToggle({ isAdmin }: { isAdmin: boolean }) {
                   {l.label}
                 </Link>
               ))}
-              {isAdmin && (
-                <Link href="/admin" onClick={() => setOpen(false)}
-                  className="rounded-xl px-3 py-2 text-text-secondary hover:text-text-primary hover:bg-surface-raised transition-colors">
-                  Admin
-                </Link>
-              )}
+              <Link href={isAdmin ? '/admin' : '/admin/sign-in'} onClick={() => setOpen(false)}
+                className="rounded-xl px-3 py-2 text-text-secondary hover:text-text-primary hover:bg-surface-raised transition-colors">
+                {isAdmin ? 'Admin' : 'Iniciar sesión'}
+              </Link>
             </nav>
           </div>
         </>

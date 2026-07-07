@@ -24,7 +24,9 @@ export async function PublicNav() {
           <Link href="/" className="text-text-secondary hover:text-text-primary transition-colors">Feed</Link>
           <Link href="/portfolio" className="text-text-secondary hover:text-text-primary transition-colors">Portfolio</Link>
           <a href="/#contacto" className="text-text-secondary hover:text-text-primary transition-colors">Contacto</a>
-          {userId && <Link href="/admin" className="text-text-secondary hover:text-text-primary transition-colors">Admin</Link>}
+          <Link href={userId ? '/admin' : '/admin/sign-in'} className="text-text-secondary hover:text-text-primary transition-colors">
+            {userId ? 'Admin' : 'Iniciar sesión'}
+          </Link>
         </nav>
       </div>
     </header>
