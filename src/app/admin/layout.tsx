@@ -24,7 +24,7 @@ export default async function AdminLayout({
     <ClerkProviderClient>
       <div className="min-h-screen bg-surface flex">
         <AdminSidebar />
-        <main className="flex-1 overflow-auto">
+        <main className="flex-1 overflow-auto pt-16 lg:pt-0">
           {children}
         </main>
         <Toaster position="top-right" theme="dark" toastOptions={{ style: { background: '#17171B', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '1rem', color: '#F2F2F3' } }} />
