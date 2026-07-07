@@ -1,0 +1,46 @@
+{
+  "name": "app-init",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^7.5.12",
+    "@clerk/themes": "^2.4.57",
+    "@portabletext/react": "^6.2.0",
+    "@sanity/client": "^7.23.0",
+    "@sanity/image-url": "^2.1.1",
+    "@sanity/vision": "^5.31.1",
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.38.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.42.2",
+    "lucide-react": "^1.23.0",
+    "next": "16.2.9",
+    "next-sanity": "^13.1.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "sanity": "^5.31.1",
+    "server-only": "^0.0.1",
+    "sonner": "^2.0.7",
+    "styled-components": "^6.4.3",
+    "tailwind-merge": "^3.6.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "^6.0.0",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.9",
+    "tailwindcss": "^4",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5"
+  }
+}
