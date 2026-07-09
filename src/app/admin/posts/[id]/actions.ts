@@ -15,6 +15,8 @@ export async function updatePostAction(id: string, formData: FormData) {
     imageAssetId: formData.get('imageAssetId') || undefined,
     imageAlt: formData.get('imageAlt') || undefined,
     videoUrl: formData.get('videoUrl') || undefined,
+    showInPortfolio: formData.has('showInPortfolio') ? formData.get('showInPortfolio') === 'on' : undefined,
+    portfolioOrder: formData.get('portfolioOrder') ? Number(formData.get('portfolioOrder')) : undefined,
   })
 
   if (!parsed.success) {

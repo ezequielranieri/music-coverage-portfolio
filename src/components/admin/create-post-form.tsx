@@ -221,6 +221,18 @@ export function CreatePostForm({ availableAlbums, existingPost }: CreatePostForm
         </div>
       </div>
 
+      <fieldset className="rounded-2xl bg-surface-raised border border-surface-border p-4 space-y-3">
+        <legend className="text-sm font-medium text-text-primary">Portfolio</legend>
+        <label className="flex items-center gap-2 text-sm text-text-secondary">
+          <input type="checkbox" name="showInPortfolio" defaultChecked={existingPost?.showInPortfolio ?? false} className="accent-accent-pink" />
+          Mostrar esta publicación en Portfolio
+        </label>
+        <div>
+          <label className="text-xs text-text-muted block mb-1">Orden (menor = primero)</label>
+          <input type="number" name="portfolioOrder" defaultValue={existingPost?.portfolioOrder ?? ''} className="w-20 rounded-full bg-surface-card border border-surface-border px-3 py-1.5 text-sm text-text-primary" />
+        </div>
+      </fieldset>
+
       {errors && (
         <div className="text-sm text-state-error space-y-1">
           {Object.values(errors).flat().map((err, i) => (

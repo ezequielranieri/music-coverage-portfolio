@@ -11,6 +11,8 @@ export const postSchema = z.object({
   videoUrl: z.string().url().optional().or(z.literal('')),
   videoAssetId: z.string().optional(),
   albumId: z.string().optional(),
+  showInPortfolio: z.coerce.boolean().optional(),
+  portfolioOrder: z.coerce.number().optional(),
 }).superRefine((data, ctx) => {
   if (data.type === 'image' && !data.imageAssetId) {
     ctx.addIssue({ code: 'custom', message: 'Falta subir la imagen', path: ['imageAssetId'] })
@@ -36,4 +38,6 @@ export const updatePostSchema = z.object({
   imageAlt: z.string().optional(),
   videoUrl: z.string().url().optional().or(z.literal('')),
   videoAssetId: z.string().optional(),
+  showInPortfolio: z.coerce.boolean().optional(),
+  portfolioOrder: z.coerce.number().optional(),
 })

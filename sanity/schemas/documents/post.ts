@@ -122,6 +122,19 @@ export const post = defineType({
       initialValue: () => new Date().toISOString(),
     }),
     defineField({
+      name: 'showInPortfolio',
+      title: 'Mostrar en Portfolio',
+      type: 'boolean',
+      initialValue: false,
+      description: 'Muestra esta publicación en la galería de Portfolio (independiente del feed).',
+    }),
+    defineField({
+      name: 'portfolioOrder',
+      title: 'Orden en Portfolio',
+      type: 'number',
+      description: 'Menor = primero. Las publicaciones sin valor van al final.',
+    }),
+    defineField({
       name: 'likesCount',
       title: 'Cantidad de likes',
       type: 'number',

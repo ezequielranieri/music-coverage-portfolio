@@ -42,6 +42,9 @@ export async function createPost(data: PostFormData) {
     doc.album = { _type: 'reference', _ref: data.albumId }
   }
 
+  if (data.showInPortfolio !== undefined) doc.showInPortfolio = data.showInPortfolio
+  if (data.portfolioOrder !== undefined) doc.portfolioOrder = data.portfolioOrder
+
   return writeClient.create(doc as any)
 }
 
@@ -59,6 +62,8 @@ export async function updatePost(id: string, data: Partial<PostFormData>) {
     }
   }
   if (data.videoUrl !== undefined) patch.videoUrl = data.videoUrl
+  if (data.showInPortfolio !== undefined) patch.showInPortfolio = data.showInPortfolio
+  if (data.portfolioOrder !== undefined) patch.portfolioOrder = data.portfolioOrder
 
   return writeClient.patch(id).set(patch).commit()
 }

@@ -21,6 +21,8 @@ export async function createPostAction(formData: FormData) {
     videoUrl: formData.get('videoUrl') || undefined,
     videoAssetId: formData.get('videoAssetId') || undefined,
     albumId: formData.get('albumId') || undefined,
+    showInPortfolio: formData.has('showInPortfolio') ? formData.get('showInPortfolio') === 'on' : undefined,
+    portfolioOrder: formData.get('portfolioOrder') ? Number(formData.get('portfolioOrder')) : undefined,
   })
 
   if (!parsed.success) {

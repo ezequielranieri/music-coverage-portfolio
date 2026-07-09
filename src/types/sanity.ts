@@ -30,6 +30,8 @@ export interface Post {
   genre?: string[]
   likesCount?: number
   comments?: VisibleComment[]
+  showInPortfolio?: boolean
+  portfolioOrder?: number
   status: ContentStatus
   publishedAt: string
 }
